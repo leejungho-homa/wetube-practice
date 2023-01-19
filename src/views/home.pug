@@ -1,7 +1,14 @@
-doctype html
-html(lang="ko")
-    head
-        title Wetube
-    body 
-        h1 Welcome to Wetube
-        include partials/footer.pug 
+extends base.pug
+
+block content
+    h2 Welcome here you will see the trending videos
+    ul 
+        each video in videos 
+            li=video
+        else 
+            h2 Sorry nothing in array 
+
+            
+    input(placeholder="Whats your name")
+    button send
+    
