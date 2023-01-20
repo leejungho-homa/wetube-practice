@@ -1,12 +1,12 @@
 extends base.pug
+include mixins/video
 
 block content
     h2 Welcome here you will see the trending videos
-    ul 
-        each video in videos 
-            li=video
-        else 
-            h2 Sorry nothing in array 
+    each video in videos
+      +video(video)
+    else 
+        h2 Sorry nothing in array 
 
             
     input(placeholder="Whats your name")
